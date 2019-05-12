@@ -24,11 +24,17 @@ def end_game(card_total)
 end
 
 def initial_round
+<<<<<<< HEAD
   card1 = deal_card
   card2 = deal_card
   total = card1 + card2
   display_card_total(total)
   total
+=======
+  total = deal_card + deal_card
+  display_card_total(total)
+
+>>>>>>> 4c81090b0aee4ccf2430c7a1f0d01e920620a400
 end
 
 def hit?(card_total)
@@ -40,6 +46,11 @@ def hit?(card_total)
     card_total
   else
     invalid_command
+<<<<<<< HEAD
+=======
+    prompt_user
+    card_total
+>>>>>>> 4c81090b0aee4ccf2430c7a1f0d01e920620a400
   end
 end
 
@@ -52,10 +63,18 @@ end
 
 def runner
   welcome
+<<<<<<< HEAD
   sum = initial_round
   while sum < 21
   sum = hit?(sum)
   display_card_total(sum)
+=======
+  initial_round
+  sum = initial_round
+  while sum < 21
+  hit?(sum)
+  sum +=hit?(sum)
+>>>>>>> 4c81090b0aee4ccf2430c7a1f0d01e920620a400
   end
 
   end_game(sum)
